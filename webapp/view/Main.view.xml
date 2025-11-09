@@ -1,0 +1,40 @@
+<mvc:View controllerName="flightui5ih.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+    <Table 
+		id="_IDGenTable1"
+		items="{
+			path: 'flightDataModel>/',
+			sorter: {
+				path: 'Carrname'
+			}
+		}"
+		itemPress=".onRowPress"
+		>
+
+		<columns>
+			<Column id="_carrid">
+				<Text id="carrid" text="{i18n>carrid}" />
+			</Column>
+			<Column id="_carrname">
+				<Text id="carrname" text="{i18n>carrname}" />
+			</Column>
+			<Column id="_url">
+				<Text id="Url" text="{i18n>Url}" />
+			</Column>
+
+		</columns>
+		<items>
+			<ColumnListItem id="_IDGenColumnListItem" vAlign="Middle" type="Navigation">
+				<cells>
+					<Text id="_IDGenText"  text="{flightDataModel>Carrid}"  wrapping="false" />
+					<Text id="_IDGenText1"  text="{flightDataModel>Carrname}"  wrapping="false"/>
+					<Text id="_IDGenText2"  text="{flightDataModel>Url}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+    </Page>
+</mvc:View>

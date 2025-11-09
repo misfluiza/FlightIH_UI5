@@ -1,0 +1,40 @@
+<mvc:View controllerName="flightui5ih.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page1" title="{i18n>title1}">
+     <Table id="_IDGenTable2"
+		items="{
+			path: 'flightdetailDataModel>/',
+			sorter: {
+				path: ''
+			}
+		}">
+
+		<columns>
+			<Column id="_IDGenColumn1" >
+				<Text id="_IDGenText4"  text="{i18n>connid}" />
+			</Column>
+			<Column id="_IDGenColumn2" >
+				<Text id="_IDGenText5"  text="{i18n>Fldate}" />
+			</Column>
+            <Column id="_IDGenColumn3"  >
+				<Text id="_IDGenText9"  text="{i18n>Price}" />
+			</Column>
+            <Column id="_IDGenColumn4"  >
+				<Text id="_IDGenText10"  text="{i18n>Currency}" />
+			</Column>
+
+		</columns>
+		<items>
+			<ColumnListItem id="_IDGenColumnListItem1" vAlign="Middle" type="Inactive">
+				<cells>
+					<Text id="_IDGenText7"   text="{flightdetailDataModel>Connid}"  wrapping="false"/>
+					<Text id="_IDGenText8"  text="{flightdetailDataModel>Fldate}" />
+					<Text id="_IDGenText11"  text="{flightdetailDataModel>Price}" />
+					<Text id="_IDGenText12"  text="{flightdetailDataModel>Currency}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+        </Page>
+</mvc:View>
