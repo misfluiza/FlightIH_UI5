@@ -24,6 +24,10 @@
 			<Column id="_url">
 				<Text id="Url" text="{i18n>Url}" />
 			</Column>
+				<Column id="_currency">
+				<Text id="Currency" text="{i18n>Currency}" />
+			</Column>
+			
 
 		</columns>
 		<items>
@@ -31,7 +35,8 @@
 				<cells>
 					<Text id="_IDGenText"  text="{flightDataModel>Carrid}"  wrapping="false" />
 					<Text id="_IDGenText1"  text="{flightDataModel>Carrname}"  wrapping="false"/>
-					<Text id="_IDGenText2"  text="{flightDataModel>Url}" />
+					<Text id="_IDGenText2"  text="{= ${flightDataModel>Url} ? ${flightDataModel>Url} : ('www.'+ ${flightDataModel>Carrname} + '.com')}" />
+					<Text id="_IDGenText14"  text="{flightDataModel>Currcode}" />
 				</cells>
 			</ColumnListItem>
 		</items>

@@ -107,7 +107,7 @@
         },
         {
           "name": "RouteDetail",
-          "pattern": "Detail",
+          "pattern": "Detail/{Carrid}",
           "target": [
             "TargetDetail"
           ]

@@ -1,11 +1,14 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
 	"sap/ui/core/syncStyleClass",
-	'sap/ui/model/json/JSONModel'
-], (Controller) => {
+	'sap/ui/model/json/JSONModel',
+    "flightui5ih/formatter/emptyUrlFormatter"
+], (Controller, emptyUrlFormatter) => {
     "use strict";
 
     return Controller.extend("flightui5ih.controller.Main", {
+        emptyUrlFormatter: emptyUrlFormatter,
+
         onInit() {
             var oFlightJSONModel = new sap.ui.model.json.JSONModel();
             var that = this;
